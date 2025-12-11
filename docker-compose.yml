@@ -2,7 +2,7 @@ name: repaso-jakarta
 services:
   tomee:
     image: tomee:jre21-webprofile
-    container_name: tomee_trivial
+    container_name: tomee_repaso
     ports:
       - "8685:8080"
     volumes:
@@ -12,10 +12,10 @@ services:
 
   db:
     image: mysql:8.0.34
-    container_name: mysql_db_trivial
+    container_name: mysql_db_repaso
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: repaso
+      MYSQL_DATABASE: blackjack
       MYSQL_USER: cristian
       MYSQL_PASSWORD: secret
     ports:
@@ -24,8 +24,8 @@ services:
       - db_repaso:/var/lib/mysql
 
   phpmyadmin:
-    image: phpmyadmin:5.2
-    container_name: phpmyadmin_trivial
+    image: phpmyadmin:latest
+    container_name: phpmyadmin_repaso
     environment:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: root

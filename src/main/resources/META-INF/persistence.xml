@@ -5,8 +5,10 @@
              version="3.2">
     <persistence-unit name="RepasoMysql">
         <class>org.daw.repasojdbc.model.User</class>
+        <class>org.daw.repasojdbc.model.Deck</class>
+        <class>org.daw.repasojdbc.model.Card</class>
         <properties>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://db:3306/trivial"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://db:3306/blackjack"/>
             <property name="jakarta.persistence.jdbc.user" value="root"/>
             <property name="jakarta.persistence.jdbc.password" value="root"/>
             <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
